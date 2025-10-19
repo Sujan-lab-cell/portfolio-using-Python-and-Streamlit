@@ -1,8 +1,20 @@
 import streamlit as st
-
+import requests 
+from streamlit_lottie import st_lottie
 st.set_page_config(page_title="My Portfolio",page_icon=":tada:",layout="wide")
+import json
+import streamlit as st
+from streamlit_lottie import st_lottie
+
+# Load Lottie animation from local file
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+lootile_codeing=load_lottiefile("Robot Futuristic Ai animated.json")
+cam=load_lottiefile("Headphone with blueberry cartoon.json")
+st_lottie(cam,height=200,width=300,key="codings")
+st.header("Welcome to My Portfolio :tada:")
 with st.container():
-    st.header("Welcome to My Portfolio Website! :tada:")
     st.divider()
     st.subheader("Hi, I am Sujan K S :smile::wave:")
     st.title("A Machine Learning Enthusiast from India")
@@ -17,14 +29,16 @@ with st.container():
             st.write("##")
             st.write(
                 """
-                I am Sujan K S, a dedicated machine learning enthusiast from India with a passion for harnessing the power of data to drive innovation and solve complex problems. My journey in the field of machine learning began with a fascination for algorithms and their potential to transform industries.
+                - I am Sujan K S, a dedicated machine learning enthusiast from India.Driven by the power of  data to drive innovation and solve problems.
 
-                Over the years, I have honed my skills in various aspects of machine learning, including data preprocessing, model development, and deployment. I have experience working with popular libraries such as TensorFlow, PyTorch, and Scikit-learn, and I am proficient in programming languages like Python and C++.
+                - Over the years, I have honed my skills in various aspects of machine learning, including data preprocessing, model development, and deployment.Using tools such as TensorFlow, PyTorch, and Scikit-learn,With proficient Python and C++.
 
-                My interests extend to Natural Language Processing (NLP),Nural Network And Deep Learning(NNDL),IOT And Computer Vision ..where I enjoy exploring techniques .  constantly seeking to expand my knowledge and stay updated with the latest advancements in these fields.
+                - My interests extend to NLP,Nural Network And Deep Learning,IOT And Computer Vision.constantly seeking to expand my knowledge and stay updated with the latest advancements in these fields.
 
-                Beyond technical skills, I am a strong advocate for collaboration and continuous learning. I believe that sharing knowledge and working together leads to more innovative solutions. I am excited about the future of machine learning and eager to contribute to projects that make a positive impact on society.
+                - Beyond technical skills, I am a strong advocate for collaboration and continuous learning. I believe that sharing knowledge and working together leads to more innovative solutions. I am excited about the future of machine learning and eager to contribute to projects that make a positive impact on society.
                 """
             )
             st.write("[Linkedin URL >](https://www.linkedin.com/in/sujan-k-s-982b62194/)")
-    
+            
+    with right_column:
+            st_lottie(lootile_codeing,height=400,width=700,key="coding")
