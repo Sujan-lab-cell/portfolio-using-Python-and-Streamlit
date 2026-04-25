@@ -18,7 +18,21 @@ textarea {
     /* Bottom margin */
     resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
 }
+/* Main background */
+[data-testid="stAppViewContainer"] {
+    background-color: rgb(232, 221, 241);
+    color: white;
+}
 
+/* Sidebar (optional) */
+[data-testid="stSidebar"] {
+    background-color: #111;
+}
+
+/* Make all text white */
+h1, h2, h3, h4, h5, h6, p, span, label {
+    color: white !important;
+}
 
 /* Style the submit button with a specific background color etc */
 

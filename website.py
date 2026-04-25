@@ -6,7 +6,6 @@ st.set_page_config(page_title="My Portfolio",page_icon=":tada:",layout="wide")
 import json
 import streamlit as st
 from streamlit_lottie import st_lottie
-
 # Load Lottie animation from local file
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
